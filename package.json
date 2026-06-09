@@ -1,0 +1,22 @@
+{
+  "name": "gh-prs",
+  "version": "1.0.0",
+  "description": "See open pull requests across all your GitHub repos at a glance",
+  "main": "src/index.js",
+  "bin": {
+    "gh-prs": "./cli.js"
+  },
+  "scripts": {
+    "test": "node --test test/test.cjs"
+  },
+  "keywords": ["github", "pull-requests", "cli", "productivity"],
+  "author": "sulthonzh",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sulthonzh/gh-prs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
