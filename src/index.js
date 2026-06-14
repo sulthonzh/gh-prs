@@ -180,10 +180,7 @@ async function run(opts = {}) {
     const prs = getOpenPRs(opts.repo);
     const results = [{ repo: opts.repo, prs }];
 
-    if (opts.json) return formatJSON(results);
-    if (opts.markdown) return formatMarkdown(results);
-    if (opts.summary) return formatSummary(results);
-    return formatText(results, opts);
+    return formatResults(results, opts);
   }
 
   const repos = getRepos(user, { limit: opts.limit || 50, type: 'owner' });
@@ -195,6 +192,10 @@ async function run(opts = {}) {
     results.push({ repo: r.nameWithOwner, prs });
   }
 
+  return formatResults(results, opts);
+}
+
+function formatResults(results, opts) {
   if (opts.json) return formatJSON(results);
   if (opts.markdown) return formatMarkdown(results);
   if (opts.summary) return formatSummary(results);
