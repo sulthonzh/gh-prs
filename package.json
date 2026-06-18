@@ -1,5 +1,5 @@
 {
-  "name": "gh-prs",
+  "name": "@quadbyte/gh-prs",
   "version": "1.0.0",
   "description": "See open pull requests across all your GitHub repos at a glance",
   "main": "src/index.js",
@@ -9,7 +9,12 @@
   "scripts": {
     "test": "node --test test/test.cjs"
   },
-  "keywords": ["github", "pull-requests", "cli", "productivity"],
+  "keywords": [
+    "github",
+    "pull-requests",
+    "cli",
+    "productivity"
+  ],
   "author": "sulthonzh",
   "license": "MIT",
   "repository": {
@@ -18,5 +23,12 @@
   },
   "engines": {
     "node": ">=18"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "src/",
+    "cli.js"
+  ]
 }
